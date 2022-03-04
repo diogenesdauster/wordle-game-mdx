@@ -13,7 +13,9 @@ Wordle is a web-based word game developed by Josh Wardle. Players have six attem
 ## TODOS
 
 [] Create React Components as Mendix Snippets
+
 [] Session for Users
+
 [] Unit Tests
 
 ## Credits 
