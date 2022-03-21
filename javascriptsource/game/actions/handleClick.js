@@ -15,7 +15,14 @@ import { Big } from "big.js";
  */
 export async function handleClick() {
 	// BEGIN USER CODE
-	const result = document.activeElement.textContent;
+	const element = document.activeElement
+	const result = element.textContent.trim()
+    const dataLetter = element.getAttribute('data')
+	
+	if(!dataLetter) {
+		 element.setAttribute('key', result )
+	}
+
 	return result;
 	// END USER CODE
 }

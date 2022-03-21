@@ -16,6 +16,47 @@ import { Big } from "big.js";
 		messageDisplay.append(messageElement)
 		setTimeout(()=> messageDisplay.removeChild(messageElement),2000 )
 	}
+
+	const flipTile = () => {
+		const rowTiles = document.querySelector('.mx-name-guessRow_' + currentRow).childNodes
+		let checkWord = word
+		const guess = []
+
+		// coloca tudo como cinza
+		rowTiles.forEach( tile => {
+			guess.push({ letter : tile.getAttribute('data'), color : 'gray-overlay'})
+		})
+
+		// preenche de verde se a letra bater no lugar certo
+		guess.forEach((guess, index) => {
+			 if(guess.letter == word[index]) {
+				 guess.color = 'green-overlay'
+				 checkWord = checkWord.replace(guess.letter, '')
+			 }
+		})
+
+		// preenche de amarelo se a letra está correta mas no lugar errado
+		guess.forEach( guess => {
+			 if(checkWord.includes(guess.letter)) {
+				 guess.color = 'yellow-overlay'
+				 checkWord = checkWord.replace(guess.letter, '')
+			 }
+		})	
+
+		// preenche a linha atual com as cores juntamente com as teclas
+		rowTiles.forEach((tile, index) => {
+			setTimeout(()=> {
+				tile.classList.add('flip')
+				tile.classList.add(guess[index].color)
+				addColorToKey(guess[index].letter, guess[index].color)
+			}, 500 * index)
+		})
+	}
+
+	const addColorToKey = (keyLetter, style) => {
+		const key = document.querySelector('[key='+ keyLetter + ']')
+		key.classList.add(style)
+	}
 	
 // END EXTRA CODE
 
@@ -26,10 +67,9 @@ export async function checkRow() {
 	// BEGIN USER CODE
 
 	const guess = guesses[currentRow].join('')
-	console.log(currentTile)
-	console.log(guess)
-	console.log(word)
-	if(currentTile === 5) {
+
+	if(currentTile > 4) {
+		flipTile()
 		if ( word == guess ) {
 			showMessage('Topzeraaaaaa')
 			isGameOver = true
