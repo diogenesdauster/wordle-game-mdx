@@ -24,7 +24,7 @@ import { Big } from "big.js";
 
 		// coloca tudo como cinza
 		rowTiles.forEach( tile => {
-			guess.push({ letter : tile.getAttribute('data'), color : 'gray-overlay'})
+			guess.push({ letter : tile.getAttribute('data'), color : 'grey-overlay'})
 		})
 
 		// preenche de verde se a letra bater no lugar certo
