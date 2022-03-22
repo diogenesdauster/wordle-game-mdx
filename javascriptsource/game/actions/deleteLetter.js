@@ -15,7 +15,7 @@ import { Big } from "big.js";
  */
 export async function deleteLetter() {
 	// BEGIN USER CODE
-	if(currentTile > 0 ){
+	if(currentTile > 0 && !isGameOver ){
 		currentTile--
 		const mxTile = document.querySelector('.mx-name-guessRow_'+ currentRow + '_tile_' + currentTile)
 		guesses[currentRow][currentTile] = ''

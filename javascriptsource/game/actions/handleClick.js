@@ -17,7 +17,7 @@ export async function handleClick() {
 	// BEGIN USER CODE
 	const element = document.activeElement
 	const result = element.textContent.trim()
-    const dataLetter = element.getAttribute('data')
+    const dataLetter = element.getAttribute('key')
 	
 	if(!dataLetter) {
 		 element.setAttribute('key', result )
