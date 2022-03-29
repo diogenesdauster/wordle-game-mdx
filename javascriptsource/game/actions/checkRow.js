@@ -61,30 +61,42 @@ import { Big } from "big.js";
 // END EXTRA CODE
 
 /**
+ * @param {string} urlCheck - URI endpoint check word
  * @returns {Promise.<void>}
  */
-export async function checkRow() {
+export async function checkRow(urlCheck) {
 	// BEGIN USER CODE
 
 	const guess = guesses[currentRow].join('')
-
-	if(currentTile > 4) {
-		flipTile()
-		if ( word == guess ) {
-			showMessage('Topzeraaaaaa')
-			isGameOver = true
+	
+	fetch(urlCheck + guess)
+  	.then(response => response.json())
+  	.then(check => {
+		if(!check[0]){
+			showMessage('Word invalid !!')
+			return
 		} else {
-			
-			if(currentRow >= 5) {
-				isGameOver = false
-				showMessage('Game Over My Friend!!')
-				return
-			}
-			if(currentRow < 5 ){
-				currentRow++
-				currentTile = 0
-			}
-	   }
-	} 
+			if(currentTile > 4) {
+				flipTile()
+				if ( word == guess ) {
+					showMessage('Topzeraaaaaa')
+					isGameOver = true
+				} else {
+					
+					if(currentRow >= 5) {
+						isGameOver = false
+						showMessage('Game Over My Friend!!')
+						return
+					}
+					if(currentRow < 5 ){
+						currentRow++
+						currentTile = 0
+					}
+				}
+			} 
+		}
+	  }
+	).catch(err => console.log(err))
+
 	// END USER CODE
 }
