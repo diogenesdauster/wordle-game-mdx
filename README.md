@@ -10,6 +10,11 @@ Wordle is a web-based word game developed by Josh Wardle. Players have six attem
 - JavaScript
 - CSS
 
+## APIs
+
+Click here for the Random Word API: [random-words5](https://rapidapi.com/sheharyar566/api/random-words5/?utm_source=ANIA-KUBOW&utm_medium=DevRel&utm_campaign=DevRel)
+Click here for the Dictionary API: [word-dictionary](https://rapidapi.com/twinword/api/word-dictionary/?utm_source=ANIA-KUBOW&utm_medium=DevRel&utm_campaign=DevRel)
+
 ## TODOS
 
 [] Create React Components as Mendix Snippets
@@ -20,5 +25,5 @@ Wordle is a web-based word game developed by Josh Wardle. Players have six attem
 
 ## Credits 
 
-Code with Ania Kubów: https://www.youtube.com/watch?v=mpby4HiElek&t=102s
+Code with Ania Kubów: [Youtube Canel](https://www.youtube.com/watch?v=mpby4HiElek&t=102s)
 
