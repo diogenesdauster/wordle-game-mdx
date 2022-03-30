@@ -10,18 +10,24 @@ Wordle is a web-based word game developed by Josh Wardle. Players have six attem
 - JavaScript
 - CSS
 
+## Instalation 
+
+Registry in the apis below and after that put the apikeys in the constants
+
+![Constants](https://user-images.githubusercontent.com/16214631/160888161-f9b927ad-f684-40db-a418-d52c9a7eedaf.png)
+
 ## APIs
 
-Click here for the Random Word API: [random-words5](https://rapidapi.com/sheharyar566/api/random-words5/?utm_source=ANIA-KUBOW&utm_medium=DevRel&utm_campaign=DevRel)
-Click here for the Dictionary API: [word-dictionary](https://rapidapi.com/twinword/api/word-dictionary/?utm_source=ANIA-KUBOW&utm_medium=DevRel&utm_campaign=DevRel)
+- Click here for the Random Word API: [random-words5](https://rapidapi.com/sheharyar566/api/random-words5/?utm_source=ANIA-KUBOW&utm_medium=DevRel&utm_campaign=DevRel)
+- Click here for the Dictionary API: [word-dictionary](https://rapidapi.com/twinword/api/word-dictionary/?utm_source=ANIA-KUBOW&utm_medium=DevRel&utm_campaign=DevRel)
 
 ## TODOS
 
-[] Create React Components as Mendix Snippets
+[ ] Create React Components as Mendix Snippets
 
-[] Session for Users
+[ ] Session for Users
 
-[] Unit Tests
+[ ] Unit Tests
 
 ## Credits 
 
